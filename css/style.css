@@ -33,7 +33,7 @@ header { padding: 0 0.5em; color: #C90B0B; }
 
 .content { padding: 1em 1em; }
 .project { list-style-type: none; font-size: 1.1em;}
-.projectimg { float:left; padding-right: 1em; }
+.projectimg { float:left; padding-right: 1em; max-width: 100px; max-height: 60px;}
 .projectdescription { font-size: 0.9em; font-style: italic; }
 
 footer {
