@@ -499,25 +499,25 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-
-  var totalPix = document.body.scrollTop / 1250;
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   var items = document.getElementsByClassName('mover');
-    
   for (var i = 0; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
-    var phase = Math.sin(totalPix + (i % 5));
+    
+    var phase = Math.sin((scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
-  // User Timing API to the rescue again. Seriously, it's worth learning.
-  // Super easy to create custom metrics.
-  window.performance.mark("mark_end_frame");
-  window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
-  if (frame % 10 === 0) {
-    var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
-    logAverageFrame(timesToUpdatePosition);
-  }
+    // User Timing API to the rescue again. Seriously, it's worth learning.
+    // Super easy to create custom metrics.
+    window.performance.mark("mark_end_frame");
+    window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
+    if (frame % 10 === 0) {
+        var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
+        logAverageFrame(timesToUpdatePosition);
+    }
 }
+
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
