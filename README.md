@@ -7,28 +7,18 @@ To get started, check out the repository and inspect the code.
 ### Getting started
 
 #### Part 1: Optimize PageSpeed Insights score for index.html
+https://kfuerniss.github.io/Website-Performance-Optimization
 
-Some useful tips to help you get started:
+STEPS TAKEN TO OPTIMIZE
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+- Cleaned up HTML tagging
+- Added semantic tags
+- changed the Google Analytics script to async
+- Relocated JS
+- Added the media tag to the print.css sheet
+- Removed googleapis link
+- Compressed all images
+- Inlined Style CSS 
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
@@ -36,8 +26,15 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
+STEPS TAKEN TO OPTIMIZE
+https://kfuerniss.github.io/Website-Performance-Optimization/views/pizza.html
+
+- changed querySelectAll to getElementsByClassName
+- removed declared variables from the for loop in changePizzaSize function
+- removed declared variable scrollTop from updatePositions function
+
 ### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
+* [Optimizing Performance]( "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
 * [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
 * [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
