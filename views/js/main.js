@@ -425,7 +425,7 @@ var resizePizzas = function(size) {
     var windowWidth = document.getElementById("randomPizzas").offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
-    // Changes the slider value to a percent width
+    
     function sizeSwitcher (size) {
       switch(size) {
         case "1":
@@ -518,7 +518,6 @@ function updatePositions() {
     }
 }
 
-
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
 
@@ -526,7 +525,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
