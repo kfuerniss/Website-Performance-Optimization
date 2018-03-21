@@ -7,7 +7,9 @@ To get started, check out the repository and inspect the code.
 ### Getting started
 
 #### Part 1: Optimize PageSpeed Insights score for index.html
-https://kfuerniss.github.io/Website-Performance-Optimization
+
+Steps to get to website
+Open the webpage by using the following URL in your browser: https://kfuerniss.github.io/Website-Performance-Optimization
 
 STEPS TAKEN TO OPTIMIZE
 
@@ -22,13 +24,13 @@ STEPS TAKEN TO OPTIMIZE
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 STEPS TAKEN TO OPTIMIZE
-https://kfuerniss.github.io/Website-Performance-Optimization/views/pizza.html
+Open the webpage by using the following URL in your browser: https://kfuerniss.github.io/Website-Performance-Optimization/views/pizza.html
 
+STEPS TAKEN TO OPTIMIZE
+
+- reduced the amount of pizzas the show on the webpage to 30
 - changed querySelectAll to getElementsByClassName
 - removed declared variables from the for loop in changePizzaSize function
 - removed declared variable scrollTop from updatePositions function
